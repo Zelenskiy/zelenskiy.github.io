@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title>Експериментальна робота №9</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="js.js" defer></script>
+    <script src="jquery-3.5.0.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"></script>
+
+</head>
+<body>
+<h2 class="">Експериментальна робота №9</h2>
+
+<!--<canvas id="c1" width="500" height="688"></canvas>-->
+<!--<div id="xcont" class="btn-group mr-2  btn-on-cnv" role="group" aria-label="Second group">-->
+<!--    <button id="btn_zoom_default" type="button" class="btn bg-info  mr-1" title="Скинути масштаб">.</button>-->
+<!--    <button id="btn_zoom_up" type="button" class="btn bg-info  " title="Збільшити">+</button>-->
+<!--    <button id="btn_zoom_down" type="button" class="btn bg-info ml-1" title="Зменшити">-</button>-->
+<!--    <button id="btn_drag" type="button" class="btn bg-info ml-1" title="Перетягування">※</button>-->
+<!--</div>-->
+<!--<div class="btn-group mr-2" role="group" aria-label="Second group">-->
+<!--    <button id="k1" type="button" class="btn btn-secondary ml-1">1</button>-->
+<!--    <button id="k2" type="button" class="btn btn-secondary ml-1">2</button>-->
+<!--</div>-->
+<!--<input id="calibr_edit" type="number" step="0.01" min="0" placeholder="0,000" value="0.010">-->
+<!--<div class=" btn-group mr-2" role="group" aria-label="Second group">-->
+<!--<button id="o1" type="button" class="btn btn-secondary">1</button>-->
+<!--<button id="o2" type="button" class="btn btn-secondary ml-1">2</button>-->
+<!--<button id="o3" type="button" class="btn btn-secondary ml-1">3</button>-->
+<!--</div>-->
+<!--<label>Радіус траєкторії</label><br>-->
+<!--<label id="lbl2">R = ...</label><br>-->
+<!--<div class="btn-group mr-2" role="group" aria-label="Second group">-->
+<!--    <button id="btn_draw" type="button" class="btn btn-secondary ml-1">Draw</button>-->
+<!--    <button id="btn_clear" type="button" class="btn btn-secondary ml-1">Clear</button>-->
+<!--</div>-->
+
+<div id="main" class="container  mx-md-1">
+
+    <div class="row">
+        <div id="aa" class="col bg-info ">
+            <canvas id="c1"></canvas>
+
+
+        </div>
+        <div class="col bg-info ">
+            <div class="mt-3 ml-0  mr-1 mb-1">
+                <div id="xcont" class="btn-group mr-2  " role="group" aria-label="Second group">
+                    <button id="btn_zoom_default" type="button" class="btn  bg-primary mr-1 " title="Скинути масштаб">.</button>
+                    <button id="btn_zoom_up" type="button" class="btn  bg-secondary " title="Збільшити">+</button>
+                    <button id="btn_zoom_down" type="button" class="btn bg-warning ml-1" title="Зменшити">-</button>
+                    <button id="btn_drag" type="button" class="btn bg-danger ml-1" title="Перетягування">※</button>
+                </div>
+                <br><br>
+                <label class="mt-3">Калібрування</label><br>
+
+                <div class="btn-group mr-2" role="group" aria-label="Second group">
+                    <button id="k1" type="button" class="btn btn-secondary ml-1">1</button>
+                    <button id="k2" type="button" class="btn btn-secondary ml-1">2</button>
+                </div>
+
+                <br><br>
+                <label>Значення довжини одиничного відрізка в метрах</label><br>
+                <input id="calibr_edit" type="number" step="0.01" min="0" placeholder="0,000" value="0.010">
+                <br> <br>
+                <label>Всановлення маркерів на треку для визначення його радіусу</label><br>
+
+
+                <div class="btn-group mr-2" role="group" aria-label="Second group">
+                    <button id="o1" type="button" class=" bg-red">1</button>
+                    <button id="o2" type="button" class=" bg-green ml-1">2</button>
+                    <button id="o3" type="button" class=" bg-blue ml-1">3</button>
+                </div>
+
+                <br> <br>
+                <label>Радіус траєкторії</label><br>
+                <label id="lbl2">R = ...</label><br>
+
+                <br>
+                <div class="btn-group mr-2" role="group" aria-label="Second group">
+                    <button id="btn_draw" type="button" class="btn btn-secondary ml-1">Draw</button>
+                    <button id="btn_clear" type="button" class="btn btn-secondary ml-1">Clear</button>
+                </div>
+                <br><br>
+                <div class="btn-group mr-2" role="group" aria-label="Second group">
+                    <button id="test" type="button" class="btn btn-secondary ml-1">test</button>
+                </div>
+                <br><br>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<div class="container lg-1 ">
+    <P class=""><A href="http://www.ho.ua/">Хостинг в Україні безкоштовно</A></P>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

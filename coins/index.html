@@ -1,0 +1,110 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <title></title>
+<script type="text/javascript">
+	var max =128;
+	var heads = 0;
+	var tails = 0;
+</script>
+<style type="text/css">
+
+input {
+  font-size: 34px;
+
+}
+
+label {
+  font-size: 42px;
+}
+
+legend {
+  font-size: 42px;
+}
+
+.my1 {
+  font-size: 34px;
+
+}
+
+
+
+</style>
+
+ </head>
+ <body style="background: #f0f0f0">
+<SCRIPT>
+
+/*
+function getRandomIntOld(min, max){
+	var k;
+	k = 0;
+	var rn = Math.floor(Math.random() * (max - min + k)) + min;
+	
+  	return rn;
+}*/
+
+function getRandomInt(max){
+	var rn = 0;
+	for (let i=0; i<=max; i++){
+		if (Math.random()<0.5001) rn++;
+	}
+  	return rn;
+}
+
+
+
+function shake(){
+	document.getElementById('text_id').value = max;
+	heads = getRandomInt(max);
+	if (heads>max) heads = max;
+	tails = max - heads;
+	document.getElementById('lbl_1').value = heads;
+	document.getElementById('lbl_2').value = tails;
+
+	max = heads;
+}
+
+function inputNum(){
+	max = parseInt(document.getElementById('text_id').value);
+}
+
+</SCRIPT>
+
+
+
+
+<div class="container-fluid">
+		<legend >Фізика 11. Експериментальна робота №8</legend>
+		<div  class="col-md-1 fix">
+			<label  class="">Всього:</label>
+			<input  type="number"  id="text_id" aria-describedby="emailHelp"  name="count" onchange="inputNum();" value="128">
+		</div>
+		
+		<div  class="col-md-1 fix">
+			<label >Орел:</label>
+			<input  type="text"  id="lbl_1">
+		</div>
+		
+		<div  class="col-md-1 fix">
+			<label >Решка:</label>
+			<input  type="text"  id="lbl_2">
+		</div><br>
+		<div >
+	        <label > </label>
+			<button  class="my1 btn btn-primary "  id="btn" onclick="shake();">Підкинути</button>
+			<button class="my1 btn btn-primary "  id="btn2" onclick="location.reload();">Оновити</button>
+    </div>
+
+		
+</div>
+
+
+
+
+<P ><A class="  mr-3  ml-3 small" href="http://www.ho.ua/">Хостинг в Україні безкоштовно</A></P>
+ </body>
+</html>

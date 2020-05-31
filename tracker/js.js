@@ -513,7 +513,7 @@ if (platform == "Mobile") {
                     k1.y = mk_anti_trans(event.offsetY,y0) ;
                 } else if (kalibr_btn == 2) {
                     k2.x = mk_anti_trans(event.offsetX, x0) ;
-                    k2.y = mk_anti_trans(event.offsetYтест, y0) ;
+                    k2.y = mk_anti_trans(event.offsetY, y0) ;
                 }
                 make_base();
                 draw_markers();
